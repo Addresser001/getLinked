@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Unica+One&display=swap');
 @import './assets/styles/clash-display.scss';
 @import './assets/styles/variables.scss';
 
@@ -12,17 +12,19 @@
 html {
 	// cursor: none;
 	scroll-behavior: smooth;
+	background: #150e28;
 }
 
 body {
 	position: relative;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
-	background-color: #ffffff;
 	font-variant: normal;
-	color: #000000;
+	max-width: 1512px;
+	margin: 0 auto;
+	color: #fff;
 }
 
 h1,
@@ -50,4 +52,14 @@ a {
 button {
 	outline: 0;
 	border: 0;
+	cursor: pointer;
+	font-weight: 400;
+	background: linear-gradient(270deg, #903aff 0%, #d434fe 56.42%, #ff26b9 99.99%, #fe34b9 100%);
+	color: #fff;
+	width: 172px;
+	height: 53px;
+	border-radius: 4px;
+	.w-100 {
+		width: 100%;
+	}
 }
