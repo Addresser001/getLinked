@@ -1,6 +1,6 @@
 import { ChangeEventHandler, FocusEventHandler } from "react";
 import "./styles.scss";
-import { AnimatePresence, animate, motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { notificationVariant } from "../../utils/helpers";
 
 interface props {
