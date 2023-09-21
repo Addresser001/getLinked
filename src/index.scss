@@ -3,26 +3,26 @@
 @import './assets/styles/variables.scss';
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	// transition: 0.2s ease-in-out;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // transition: 0.2s ease-in-out;
 }
 
 html {
-	// cursor: none;
-	scroll-behavior: smooth;
+  // cursor: none;
+  scroll-behavior: smooth;
 }
 
 body {
-	position: relative;
-	font-family: 'Poppins', sans-serif;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	background-color: #ffffff;
-	font-variant: normal;
-	color: #000000;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background-color: #ffffff;
+  font-variant: normal;
+  color: #000000;
 }
 
 h1,
@@ -32,22 +32,22 @@ h4,
 h5,
 h6,
 p {
-	margin: 0;
-	color: inherit;
+  margin: 0;
+  color: inherit;
 }
 
 input {
-	outline: 0;
+  outline: 0;
 }
 ul,
 li {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 button {
-	outline: 0;
-	border: 0;
+  outline: 0;
+  border: 0;
 }
