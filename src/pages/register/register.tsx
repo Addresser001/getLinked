@@ -1,9 +1,11 @@
+import CustomInput from '../../forms/Input';
 import './styles.scss';
 const RegisterPage = () => {
   return (
     <div className='register_page'>
       <div className='sub_container'>
         <div className='background_beem_left'></div>
+
         <div className='image_section'>
           <img src='/images/star_1.png' className='star_1' />
           <img
@@ -31,10 +33,12 @@ const RegisterPage = () => {
             <h2 className='create_your_account_text'>CREATE YOUR ACCOUNT</h2>
           </div>
 
+          <CustomInput />
+
           <img src='/images/star_4.png' className='star_4' />
         </div>
-        <div className='background_beem_right'></div>
       </div>
+      <div className='background_beem_right'></div>
     </div>
   );
 };

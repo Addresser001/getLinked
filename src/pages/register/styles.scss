@@ -6,7 +6,6 @@
 
   padding-bottom: 57px;
   padding-top: 72px;
-  overflow: hidden;
 
   .sub_container {
     width: 95%;
@@ -25,6 +24,7 @@
       top: -200px;
       left: 0px;
     }
+
     .image_section {
       width: 40%;
       position: relative;
@@ -51,6 +51,7 @@
     }
 
     .form_section {
+      overflow: hidden;
       width: 50%;
       height: 740px;
       border-radius: 12px;
@@ -110,16 +111,16 @@
         }
       }
     }
-    .background_beem_right {
-      background: url('../../../public/images/background_beem_right.png');
-      background-repeat: no-repeat;
-      background-blend-mode: hard-light;
-      width: 1037px;
-      height: 948px;
-      flex-shrink: 0;
-      position: absolute;
-      top: 200px;
-      right: -500px;
-    }
+  }
+  .background_beem_right {
+    background: url('../../../public/images/background_beem_right.png');
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    width: 537px;
+    height: 648px;
+    flex-shrink: 0;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
   }
 }
