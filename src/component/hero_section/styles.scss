@@ -29,7 +29,45 @@
 		align-items: center;
 		padding-left: 80px;
 		.content {
+			position: relative;
 			flex: 1 1 0;
+			.bulb-img,
+			.chain-img,
+			.strike-img {
+				opacity: 0;
+			}
+			.bulb-img {
+				position: absolute;
+				right: 65px;
+				top: -40px;
+				@media (max-width: 767px) {
+					width: 18px;
+					right: 120px;
+					top: -7px;
+				}
+			}
+			.strike-img {
+				position: absolute;
+				right: -90px;
+				top: 100px;
+				@media (max-width: 767px) {
+					width: 32px;
+					right: 0px;
+				}
+			}
+			.chain-img {
+				position: absolute;
+				right: -30px;
+				top: 100px;
+				@media (max-width: 767px) {
+					width: 32px;
+					right: 40px;
+				}
+			}
+			.light_bg {
+				z-index: -1;
+				position: absolute;
+			}
 			h1 {
 				max-width: 597px;
 				font-family: $clash-bold;
@@ -122,6 +160,7 @@
 			margin-left: auto;
 		}
 		.hero_content {
+			margin-top: 60px;
 			padding-left: 0;
 			flex-direction: column;
 

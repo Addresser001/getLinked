@@ -113,7 +113,7 @@ const RegisterPage = () => {
       <div className='register_page'>
         {successMessage && <CongratulationModal />}
         <div className='sub_container'>
-          <div className='background_beem_left'></div>
+          {/* <div className='background_beem_left'></div> */}
           <div className='background_beem_right'></div>
 
           <div className='image_section'>

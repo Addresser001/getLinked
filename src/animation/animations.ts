@@ -26,6 +26,9 @@ export const heroanimation = () => {
 	const heroanim4 = document.querySelector('#heroanim4');
 	const heroanim5 = document.querySelector('#heroanim5');
 	const heroanim6 = document.querySelector('#heroanim6');
+	const img1 = document.querySelector('.bulb-img');
+	const img2 = document.querySelector('.chain-img');
+	const img3 = document.querySelector('.strike-img');
 	heroTl
 		.to(heroanim1, {
 			delay: 1,
@@ -41,7 +44,11 @@ export const heroanimation = () => {
 		.to(heroanim3, textreveal)
 		.to(heroanim5, elementReveal)
 		.to(heroanim6, elementReveal)
-		.to(heroanim4, elementReveal);
+		.to(heroanim4, elementReveal)
+		.to([img1, img2, img3], {
+			opacity: 1,
+			ease: 'easein',
+		});
 };
 
 const splittingWordsAndGsapSet = (id: string) => {

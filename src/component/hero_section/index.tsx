@@ -23,8 +23,12 @@ const HeroSection = () => {
       </div>
       <div className='hero_content'>
         <div className='content'>
+          <img src="/images/bulb.png" className='bulb-img' alt="bulb" />
+          <img src="/images/chain.png" className="chain-img" alt="" />
+          <img src="/images/strike.png" className='strike-img' alt="" />
 
-          <h1 id='heroanim2'>getlinked Tech Hackathon <span>1.0</span></h1>
+          <h1 id='heroanim2'>getlinked Tech Hackathon <span>1.0</span>
+          </h1>
           <p id='heroanim3'>Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</p>
           <button id='heroanim5' onClick={() => history.push("/register")}>Register</button>
           {!countdownComplete && <Countdown

@@ -65,7 +65,6 @@ const ContactPage = () => {
   return (
     <main className='contact_page'>
       <div className='sub_container'>
-        <div className='background_beem_left'></div>
         <div className='background_beem_right'></div>
         <div className='text_section'>
           <img src='/images/star_1.png' className='star_1' />
