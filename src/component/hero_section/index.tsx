@@ -16,8 +16,7 @@ const HeroSection = () => {
     return () => { effectRan.current = true };
   }, []);
   return (
-    <section className="hero_section">
-
+    <section className='hero_section'>
       <div className='top_text'>
         <span id='heroanim1' >Igniting a Revolution in HR Innovation</span>
         {bendLine}
@@ -46,8 +45,10 @@ const HeroSection = () => {
           <img src="/images/man-wearing-smart-glasses.png" alt="man wearing smart glasses" />
         </div>
       </div>
+
+
     </section>
   );
-}
+};
 
 export default HeroSection;

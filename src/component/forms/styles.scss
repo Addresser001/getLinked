@@ -1,65 +1,76 @@
 .custom_input {
-	position: relative;
-	display: flex;
-	flex-direction: column;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 
-	label {
-		display: block;
-		margin-bottom: 5px;
-	}
-	.input_label {
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
-	}
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .input_label {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 
-	> input,
-	textarea {
-		border: 1px solid #fff;
-		background-color: rgba(255, 255, 255, 0.03);
-		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-		border-radius: 4px;
-		min-height: 47px;
-		padding-left: 27px;
-		padding-right: 27px;
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 19px;
-		font-size: 14px;
-		font-weight: 400;
-		line-height: normal;
-		color: #fff;
+  > input,
+  select,
+  textarea {
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    min-height: 47px;
+    padding-left: 27px;
+    padding-right: 27px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    color: #fff;
 
-		&:disabled {
-			cursor: not-allowed;
-			background: gray;
-		}
-		&::placeholder {
-			color: rgba(255, 255, 255, 0.25);
-			font-size: 14px;
-			font-weight: 400;
-			line-height: normal;
-		}
-		&.error {
-			transition: border-color 0.3s ease-out;
-			border-color: red;
-		}
-	}
-	.error-message {
-		color: red;
-		position: absolute;
-		bottom: -20px;
-		pointer-events: none;
-	}
-	textarea {
-		padding-top: 12px;
-		padding-bottom: 12px;
-		resize: none;
-		min-height: 143px;
+    &:disabled {
+      cursor: not-allowed;
+      background: gray;
+    }
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.25);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+    }
+    &.error {
+      transition: border-color 0.3s ease-out;
+      border-color: red;
+    }
+  }
 
-		&:focus {
-			outline: 0;
-		}
-	}
+  .checkbox {
+    display: flex;
+    label {
+      font-size: 12px;
+      position: relative;
+      left: 10px;
+    }
+  }
+
+  .error-message {
+    color: red;
+    position: absolute;
+    bottom: -20px;
+    pointer-events: none;
+  }
+  textarea {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    resize: none;
+    min-height: 143px;
+
+    &:focus {
+      outline: 0;
+    }
+  }
 }

@@ -25,18 +25,20 @@ const TimelineSection = () => {
               <div className='line' />
               <div className='number'>{idx + 1}</div>
             </div>
-            {!even && <div className='date'>
-              <span>{date}</span>
-            </div>}
-            {even && <div className="details">
-              <span>{title}</span>
-              <span>{description}</span>
-            </div>}
+            {!even &&
+              <div className='date'>
+                <span>{date}</span>
+              </div>}
+            {even &&
+              <div className='details'>
+                <span>{title}</span>
+                <span>{description}</span>
+              </div>}
           </div>
         })}
       </div>
     </section>
   );
-}
+};
 
 export default TimelineSection;

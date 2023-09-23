@@ -1,4 +1,4 @@
-import './styles.scss'
+import './styles.scss';
 const JudgingCriteriaSection = () => {
   return (
     <section className="judging_criteria_section">
@@ -45,9 +45,8 @@ const JudgingCriteriaSection = () => {
         </div>
         <button data-animation='reveal'>Read More</button>
       </div>
-
     </section>
   );
-}
+};
 
 export default JudgingCriteriaSection;

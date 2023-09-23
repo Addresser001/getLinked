@@ -168,3 +168,13 @@ button {
 		transform: rotate(360deg);
 	}
 }
+
+.category_options {
+	padding-top: 30px !important;
+	background-color: #150e28;
+	height: 100px;
+
+	&:hover {
+		background-color: #903aff;
+	}
+}

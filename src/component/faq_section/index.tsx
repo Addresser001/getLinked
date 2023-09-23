@@ -1,4 +1,4 @@
-import './styles.scss'
+import './styles.scss';
 const FAQSection = () => {
   return (
     <section id='faq' className="faq_section">
@@ -37,11 +37,11 @@ const FAQSection = () => {
           </div>
         </div>
       </div>
-      <div className="image_wrapper">
-        <img src="/images/faq-side-image.png" alt="questions" />
+      <div className='image_wrapper'>
+        <img src='/images/faq-side-image.png' alt='questions' />
       </div>
     </section>
   );
-}
+};
 
 export default FAQSection;

@@ -64,7 +64,6 @@ export const openMenu = () => {
 	const tl = gsap.timeline();
 	tl.to('body', {
 		duration: 0.1,
-		css: { overflowY: 'hidden' },
 		ease: 'power3.out',
 	})
 		.to('.hamburger-menu', {
@@ -103,7 +102,6 @@ export const closeMenu = () => {
 	const tl = gsap.timeline();
 	tl.to('body', {
 		duration: 0.05,
-		css: { overflowY: 'scroll' },
 		ease: 'power3.inOut',
 	})
 		.to(['.nav-primary', '.nav-secondary'], {

@@ -2,18 +2,160 @@
   width: 100%;
   height: 100vh;
   background: rgba(21, 14, 40, 0.93);
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0px;
   bottom: 0px;
   z-index: 9999999;
   .congratulation_modal_sub_container {
-    margin: auto;
     width: 699px;
-    height: 664px;
+    // height: 90%;
     flex-shrink: 0;
     border-radius: 5px;
     border: 1px solid #d434fe;
     background: rgba(255, 255, 255, 0.01);
+    text-align: center;
+
+    padding: 50px 0px;
+    .successful_image_container {
+      position: relative;
+      .successfully_done_image {
+        width: 25%;
+        height: 25%;
+        position: relative;
+        right: 50px;
+      }
+      .successful_man_image {
+        width: 200px;
+        height: 250px;
+        position: absolute;
+        z-index: 100;
+        right: 180px;
+        top: -20px;
+      }
+    }
+
+    h2 {
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-top: 50px;
+    }
+
+    .yes_it_was_easy {
+      position: relative;
+      p {
+        font-size: 14px;
+        margin: 20px 0px;
+      }
+      img {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        position: absolute;
+        bottom: 0px;
+        right: 210px;
+      }
+    }
+    .back_btn {
+      width: 80%;
+      margin: auto;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .congratulation_modal_sub_container {
+      width: 450px;
+      padding: 50px 0px;
+      .successful_image_container {
+        .successfully_done_image {
+          width: 90px;
+          height: 90px;
+          position: relative;
+          right: 50px;
+        }
+        .successful_man_image {
+          width: 150px;
+          height: 180px;
+
+          right: 130px;
+          top: -20px;
+        }
+      }
+
+      h2 {
+        font-size: 20px;
+        margin-top: 60px;
+      }
+
+      .yes_it_was_easy {
+        position: relative;
+        p {
+          font-size: 12px;
+          margin: 20px 0px;
+        }
+        img {
+          width: 20px;
+          height: 20px;
+          flex-shrink: 0;
+          position: absolute;
+          bottom: 0px;
+          right: 100px;
+        }
+      }
+      .back_btn {
+        width: 80%;
+        margin: auto;
+        height: 35px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .congratulation_modal_sub_container {
+      width: 80%;
+      padding: 20px 15px;
+      .successful_image_container {
+        .successfully_done_image {
+          width: 90px;
+          height: 90px;
+          position: relative;
+          left: 20px;
+          bottom: 50px;
+        }
+        .successful_man_image {
+          width: 120px;
+          height: 150px;
+
+          position: relative;
+          right: 20px;
+          top: 10%;
+        }
+      }
+
+      h2 {
+        font-size: 16px;
+        margin-top: 0px;
+      }
+
+      .yes_it_was_easy {
+        position: relative;
+        p {
+          font-size: 12px;
+          margin: 20px 0px;
+        }
+        img {
+          display: none;
+        }
+      }
+      .back_btn {
+        width: 80%;
+        margin: auto;
+        height: 35px;
+      }
+    }
   }
 }
