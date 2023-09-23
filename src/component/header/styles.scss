@@ -1,13 +1,17 @@
 @import '../../assets/styles/variables.scss';
 .app_header {
-	background-color: transparent;
+	position: relative;
+	z-index: 4;
+	background: #150e28;
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
 	padding: 67px 60px 30px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 	column-gap: 24px;
 
 	.app_name {
+		cursor: pointer;
 		font-family: $clash-bold;
 		font-size: 36px;
 		font-weight: 700;
@@ -38,9 +42,74 @@
 			margin-left: 10%;
 		}
 	}
+	.menu {
+		display: none;
+		align-items: center;
+		justify-content: center;
+		width: 36px;
+		height: 36px;
+		border-radius: 8px;
+		border: 1px solid #903aff;
+		border-radius: 50%;
+
+		.hamburger {
+			position: relative;
+			cursor: pointer;
+			background-color: transparent !important;
+
+			.hamburger-icon {
+				color: white;
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				top: 45%;
+
+				&::before,
+				&::after {
+					content: '';
+					position: absolute;
+					width: 20px;
+					height: 2px;
+					background: white;
+					transform: rotate(0deg) translate(0px, -4px);
+					transition: transform 0.25s ease-in-out;
+				}
+
+				&::after {
+					transform: rotate(0deg) translate(0px, 4px);
+				}
+			}
+
+			&__active {
+				@extend .hamburger;
+
+				.hamburger-icon {
+					@extend .hamburger-icon;
+
+					&::before {
+						transform: rotate(-45deg) translate(0px, 0px);
+					}
+
+					&::after {
+						transform: rotate(45deg) translate(0px, 0px);
+					}
+				}
+			}
+		}
+	}
 	@media (max-width: 767px) {
 		nav {
 			display: none;
+		}
+		.menu {
+			display: flex;
+		}
+	}
+	@media (max-width: 655px) {
+		padding: 30px 15px 23px 15px;
+		.app_name {
+			font-size: 15px;
 		}
 	}
 }

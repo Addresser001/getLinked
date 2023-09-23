@@ -11,11 +11,14 @@
 		display: flex;
 		flex-direction: column;
 		span {
+			text-align: center;
 			font-size: 36px;
 			font-style: italic;
 			font-weight: 700;
 		}
 		svg {
+			width: 0;
+			opacity: 0;
 			margin-left: auto;
 		}
 	}
@@ -48,12 +51,18 @@
 				line-height: 33.2px;
 			}
 			button {
+				position: relative;
+				top: 20px;
+				opacity: 0;
 				margin-bottom: 77px;
 			}
 			.count_down {
 				font-family: 'Unica One', cursive;
 				display: flex;
 				column-gap: 20px;
+				position: relative;
+				top: 20px;
+				opacity: 0;
 
 				span {
 					font-size: 64px;
@@ -73,10 +82,99 @@
 		}
 	}
 	.hero_image {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		top: 20px;
+		opacity: 0;
 		flex: 1 1 0;
-		// width: 50%;
+
+		.particle_image {
+			bottom: 0px;
+			position: absolute;
+			width: 80%;
+			animation: imageRotation 100s linear infinite;
+		}
 		img {
 			width: 100%;
+		}
+	}
+	@media (max-width: 1025px) {
+		.top_text {
+			margin-right: auto;
+		}
+		.hero_content {
+			.content {
+				h1 {
+					font-size: 60px;
+					line-height: normal;
+				}
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		padding-left: 15px;
+		padding-right: 15px;
+
+		.top_text {
+			width: fit-content;
+			margin-left: auto;
+		}
+		.hero_content {
+			padding-left: 0;
+			flex-direction: column;
+
+			.content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+			}
+		}
+	}
+	@media (max-width: 681px) {
+		.top_text {
+			span {
+				font-size: 20px;
+			}
+		}
+	}
+	@media (max-width: 655px) {
+		.hero_content {
+			.content {
+				h1 {
+					font-size: 32px;
+				}
+				p {
+					font-size: 13px;
+					margin-bottom: 24px;
+				}
+				button {
+					margin-bottom: 14px;
+				}
+				.count_down span {
+					font-size: 48px;
+					line-height: 63.84px;
+				}
+			}
+		}
+		.hero_image {
+			max-width: 419px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	@media (max-width: 390px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	@keyframes imageRotation {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
 		}
 	}
 }

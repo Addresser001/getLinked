@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 export const split = () => {
 	const p = document.querySelectorAll("[data-animation='paragraph']");
 	const H = document.querySelectorAll("[data-animation='header']");
+	const revel = document.querySelectorAll("[data-animation='reveal']");
 	p.forEach((item) => {
 		Splitting({
 			target: item,
@@ -21,12 +22,13 @@ export const split = () => {
 		IO(item, { threshold: 0.8 }).then(() => {
 			const elem = item.querySelectorAll('.word');
 			gsap.to(elem, {
+				repeat: -1,
 				repeatRefresh: true,
 				yPercent: 0,
 				opacity: 1,
 				rotateX: 0,
 				stagger: elem.length > 100 ? 0.02 : 0.03,
-				duration: elem.length > 100 ? 0.65 : 0.75,
+				duration: 0.5,
 				ease: 'easeOut',
 			});
 		});
@@ -52,6 +54,22 @@ export const split = () => {
 				yPercent: 0,
 				stagger: elem.length > 100 ? 0.01 : 0.02,
 				duration: elem.length > 100 ? 0.5 : 0.6,
+				ease: 'easeOut',
+			});
+		});
+	});
+	revel.forEach((item) => {
+		gsap.set(item, {
+			opacity: 0,
+			y: 40,
+		});
+		IO(item, {
+			threshold: 1,
+		}).then(() => {
+			gsap.to(item, {
+				opacity: 1,
+				y: 0,
+				duration: 0.8,
 				ease: 'easeOut',
 			});
 		});

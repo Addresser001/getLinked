@@ -4,6 +4,7 @@
 	padding-bottom: 54px;
 	padding-left: 60px;
 	padding-right: 60px;
+	background: #100b20;
 
 	.content {
 		display: flex;
@@ -104,9 +105,29 @@
 			&:last-child {
 				margin-bottom: 0px;
 				span {
+					line-height: 18.948px;
 					max-width: 89px;
 				}
 			}
 		}
+	}
+	@media (max-width: 655px) {
+		.content {
+			flex-direction: column;
+			row-gap: 40px;
+
+			.contact {
+				display: flex;
+				&:last-child {
+					span {
+						max-width: 100%;
+					}
+				}
+			}
+		}
+	}
+	@media (max-width: 390px) {
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }

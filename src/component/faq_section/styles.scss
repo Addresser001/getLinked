@@ -13,7 +13,6 @@
 		display: flex;
 		justify-content: center;
 		width: 55%;
-		// flex: 1 1 0;
 
 		img {
 			max-width: 741px;
@@ -21,9 +20,6 @@
 		}
 	}
 	.content {
-		// flex: 1 1 0;
-
-		// max-width: 35px;
 		.section_heading {
 			max-width: 253px;
 			margin-bottom: 16px;
@@ -50,5 +46,22 @@
 				}
 			}
 		}
+	}
+
+	@media (max-width: 767px) {
+		flex-direction: column;
+		.section_heading,
+		.section_paragraph {
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+		}
+		.image_wrapper {
+			margin-top: 24px;
+		}
+	}
+	@media (max-width: 390px) {
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }

@@ -1,6 +1,3 @@
-// ul li {
-//   list-style-image: url("@/assets/svgs/check-icon.svg");
-
 .terms_section {
 	display: flex;
 	align-items: center;
@@ -73,5 +70,34 @@
 			width: 100%;
 			max-width: 559px;
 		}
+	}
+
+	@media (max-width: 767px) {
+		flex-direction: column;
+		.content {
+			.section_heading,
+			.section_paragraph {
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+		}
+		.image_wrapper {
+			margin-top: 32px;
+		}
+	}
+	@media (max-width: 655px) {
+		.image_wrapper {
+			max-width: 262px;
+		}
+	}
+	@media (max-width: 500px) {
+		.content .terms_wrapper {
+			padding: 45px 15px;
+		}
+	}
+	@media (max-width: 390px) {
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }

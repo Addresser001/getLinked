@@ -35,7 +35,7 @@
 				font-weight: 700;
 				line-height: 27.76px;
 
-				span {
+				> span:not(.word) {
 					color: #ff26b9;
 				}
 			}
@@ -43,5 +43,25 @@
 		button {
 			margin-top: 41px;
 		}
+	}
+
+	@media (max-width: 767px) {
+		.content {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			.section_heading,
+			.section_heading {
+				text-align: center;
+			}
+			.attributes {
+				text-align: center;
+			}
+		}
+		flex-direction: column;
+	}
+	@media (max-width: 390px) {
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }

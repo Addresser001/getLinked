@@ -11,12 +11,17 @@
 	.image_wrapper {
 		display: flex;
 		justify-content: center;
-		// min-width: 50%;
 		flex: 1 1 0;
 
 		img {
 			max-width: 548px;
 			width: 100%;
+		}
+	}
+	.header_mobile {
+		display: none;
+		@media (max-width: 1024px) {
+			display: block;
 		}
 	}
 	.content {
@@ -28,6 +33,7 @@
 		.section_paragraph {
 			max-width: 401px;
 		}
+
 		.positions {
 			column-gap: 26px;
 			margin-top: 83px;
@@ -44,10 +50,15 @@
 					position: absolute;
 					z-index: 2;
 				}
+
 				&:nth-child(1),
 				&:nth-child(3) {
 					img {
 						top: -80px;
+						@media (max-width: 655px) {
+							width: 100%;
+							top: -45px;
+						}
 					}
 					.details {
 						height: 296px;
@@ -59,11 +70,22 @@
 							font-weight: 700;
 							line-height: normal;
 						}
+						@media (max-width: 655px) {
+							height: 125.671px;
+							span:nth-child(1) {
+								font-size: 12px;
+							}
+						}
 					}
 				}
+
 				&:nth-child(2) {
 					img {
 						top: -140px;
+						@media (max-width: 655px) {
+							width: 130%;
+							top: -50px;
+						}
 					}
 					.details {
 						height: 347px;
@@ -78,12 +100,16 @@
 						span:nth-child(3) {
 							color: #903aff;
 						}
+						@media (max-width: 655px) {
+							height: 147px;
+							span:nth-child(1) {
+								font-size: 12px;
+							}
+						}
 					}
 				}
 
 				.details {
-					// position: relative;
-					// top: -120px;
 					padding-right: 25px;
 					padding-left: 25px;
 					padding-bottom: 33px;
@@ -102,8 +128,58 @@
 						font-size: 32px;
 						font-weight: 700;
 					}
+
+					@media (max-width: 655px) {
+						span:nth-child(2) {
+							font-size: 12px;
+							line-height: normal;
+							margin-top: 8px;
+							margin-bottom: 8px;
+						}
+						span:nth-child(3) {
+							line-height: normal;
+							font-size: 14px;
+						}
+						padding-left: 9px;
+						padding-right: 9px;
+						padding-bottom: 22px;
+					}
 				}
 			}
 		}
+	}
+
+	@media (max-width: 1024px) {
+		flex-direction: column;
+		.section_heading,
+		.section_paragraph {
+			text-align: center;
+		}
+
+		.content {
+			.section_heading,
+			.section_paragraph {
+				display: none;
+			}
+		}
+	}
+	@media (max-width: 655px) {
+		.image_wrapper {
+			max-width: 321px;
+		}
+
+		.content {
+			.positions {
+				width: 100%;
+				margin-top: 127px;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+	@media (max-width: 390px) {
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }

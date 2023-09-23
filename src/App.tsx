@@ -5,6 +5,7 @@ import HomePage from './pages/home';
 import AppHeader from './component/header';
 import RegisterPage from './pages/register/register';
 import ContactPage from './pages/contact/contact';
+import MobileNavigation from './component/mobileNavigation';
 
 function App() {
   const location = useLocation();
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className='App'>
       <AppHeader />
+      <MobileNavigation />
       <div ref={cursorRef} className='cursor'></div>
       <div ref={cursorRef2} className='cursor cursor2'></div>
       <AnimatePresence initial={false} mode='wait'>

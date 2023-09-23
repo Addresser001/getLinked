@@ -1,83 +1,63 @@
-import gsap, { Power2 } from 'gsap';
+import gsap from 'gsap';
+import Splitting from 'splitting';
 
-const preloadTl: gsap.core.Timeline = gsap.timeline();
+let textreveal = {
+	repeatRefresh: true,
+	yPercent: 0,
+	opacity: 1,
+	rotateX: 0,
+	stagger: 0.03,
+	duration: 0.8,
+	ease: 'easeOut',
+};
+let elementReveal = {
+	opacity: 1,
+	top: 0,
+	ease: 'easein',
+	duration: 0.7,
+};
 
-export const preLoaderAnim = () => {
-	preloadTl
-		.to('body', {
-			duration: 0,
-			css: { overflowY: 'hidden' },
-			ease: 'power3.inOut',
-		})
-		.to('.hero_text_reveal', {
-			duration: 0,
-			display: 'none',
-			ease: 'Power3.easeOut',
-		})
-		.to('.texts-container', {
-			duration: 0,
-			opacity: 1,
-			ease: 'Power3.easeOut',
-		})
-		.from('.texts-container span', {
-			duration: 1.5,
+export const heroanimation = () => {
+	const heroTl: gsap.core.Timeline = gsap.timeline();
+	const heroanim1 = splittingWordsAndGsapSet('heroanim1');
+	const heroanim11 = document.querySelector('#heroanim11');
+	const heroanim2 = splittingWordsAndGsapSet('heroanim2');
+	const heroanim3 = splittingWordsAndGsapSet('heroanim3');
+	const heroanim4 = document.querySelector('#heroanim4');
+	const heroanim5 = document.querySelector('#heroanim5');
+	const heroanim6 = document.querySelector('#heroanim6');
+	heroTl
+		.to(heroanim1, {
 			delay: 1,
-			y: 70,
-			skewY: 10,
-			stagger: 0.4,
-			ease: 'Power3.easeOut',
+			...textreveal,
 		})
-		.to('.texts-container span', {
-			duration: 1,
-			y: 70,
-			skewY: -20,
-			stagger: 0.2,
-			ease: 'Power3.easeOut',
-		})
-		.to('.preloader', {
-			duration: 1.5,
-			height: '0vh',
-			ease: 'Power3.easeOut',
-			delay: -0.5,
-		})
-		.to('.hero_text_reveal', {
-			duration: 0,
-			display: 'block',
-			ease: 'Power3.easeOut',
-			delay: -0.5,
-		})
-		.to('.top_text', {
-			duration: 0.7,
+		.to(heroanim11, {
 			opacity: 1,
-			top: 0,
-			ease: 'Power3.easeOut',
-			delay: -0.5,
-			onComplete: headerTransitionIn,
+			width: '255',
+			ease: 'easein',
+			duration: 0.9,
 		})
-		.to('.preloader', {
-			duration: 0,
-			css: { display: 'none' },
-			delay: 0,
-		})
-		.to('body', {
-			duration: 0,
-			css: { overflowY: 'scroll' },
-			ease: 'power3.inOut',
-		});
+		.to(heroanim2, textreveal)
+		.to(heroanim3, textreveal)
+		.to(heroanim5, elementReveal)
+		.to(heroanim6, elementReveal)
+		.to(heroanim4, elementReveal);
 };
 
-export const headerTransitionIn = () => {
-	gsap.to('.app_header_wrapper', {
-		duration: 2,
-		display: 'block',
-		opacity: 1,
-		top: 56,
-		ease: 'Power3.easeOut',
+const splittingWordsAndGsapSet = (id: string) => {
+	const element = document.querySelector(`#${id}`);
+
+	Splitting({
+		target: element!,
+		by: 'lines',
 	});
-};
-
-export const imageReveal = (tl: gsap.core.Timeline) => {
-	tl.to('.reveal', { duration: 1.4, width: '0%', ease: Power2.easeInOut }).from('img', { duration: 1.4, scale: 1.6, ease: Power2.easeInOut, delay: -1.6 });
+	gsap.set(element!.querySelectorAll('.word'), {
+		yPercent: 105,
+		opacity: 0,
+		rotateX: 50,
+		transformStyle: 'preserve-3d',
+	});
+	return element!.querySelectorAll('.word');
 };
 
 export const openMenu = () => {
@@ -116,19 +96,6 @@ export const openMenu = () => {
 				ease: 'Power3.in',
 			},
 			'-=.3'
-		)
-		.from(
-			'.socails a',
-			{
-				duration: 0.5,
-				y: 80,
-				opacity: 0,
-				stagger: {
-					amount: 0.5,
-				},
-				ease: 'Power3.in',
-			},
-			'-=.3'
 		);
 };
 
@@ -136,8 +103,7 @@ export const closeMenu = () => {
 	const tl = gsap.timeline();
 	tl.to('body', {
 		duration: 0.05,
-		css: { overflowY: preloadTl.endTime() !== 0 ? 'hidden' : 'scroll' },
-		// css: { overflowY: 'scroll' },
+		css: { overflowY: 'scroll' },
 		ease: 'power3.inOut',
 	})
 		.to(['.nav-primary', '.nav-secondary'], {

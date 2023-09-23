@@ -1,4 +1,4 @@
-import { checkIcon, guardIcon } from '../../assets/svg';
+import { checkIcon } from '../../assets/svg';
 import './styles.scss'
 const PrivacyPolicy = () => {
   return (
@@ -41,7 +41,7 @@ const PrivacyPolicy = () => {
         </div>
       </div>
       <div className='image_wrapper'>
-        <img src="/images/privacy.png" alt="" />
+        <img src="/images/privacy.png" alt="privacy" />
       </div>
     </section>
   );

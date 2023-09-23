@@ -2,8 +2,8 @@ import './styles.scss'
 const PartnerSection = () => {
   return (
     <section className='partners_section'>
-      <h3 className='section_heading'>Partners and Sponsors</h3>
-      <p className='section_paragraph'>
+      <h3 className='section_heading' data-animation='header'>Partners and Sponsors</h3>
+      <p className='section_paragraph' data-animation='paragraph'>
         Getlinked Hackathon 1.0 is honored to have the following major
         companies as its partners and sponsors
       </p>
