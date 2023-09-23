@@ -115,7 +115,7 @@ button {
 	font-size: 32px;
 	font-weight: 700;
 
-	> span {
+	> span:not(.word) {
 		color: #d434fe;
 	}
 	@media (max-width: 655px) {

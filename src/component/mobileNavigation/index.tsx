@@ -1,7 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import './styles.scss'
 
 const MobileNavigation = () => {
+  const history = useHistory()
   return (
     <div className="hamburger-menu">
       <div className="nav-primary">
@@ -28,7 +29,7 @@ const MobileNavigation = () => {
               </NavLink>
             </div>
             <div className="nav-link">
-              <button>Register</button>
+              <button onClick={() => history.push('/register')}>Register</button>
             </div>
           </div>
         </div>
