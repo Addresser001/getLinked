@@ -28,13 +28,13 @@ const AppHeader = () => {
     <header className="app_header">
       <span onClick={() => history.push('/')} className="app_name">get<span>linked</span></span>
       <nav>
-        <NavLink exact activeClassName="active_link" className="custom_link" to="/#timeline">
+        <NavLink exact to="/#timeline">
           Timeline
         </NavLink>
-        <NavLink exact activeClassName="active_link" className="custom_link" to="/#overview">
+        <NavLink exact to="/#overview">
           Overview
         </NavLink>
-        <NavLink exact activeClassName="active_link" className="custom_link" to="/#faq">
+        <NavLink exact to="/#faq">
           FAQs
         </NavLink>
         <NavLink exact activeClassName="active_link" className="custom_link contact" to="/contact">

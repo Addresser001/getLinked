@@ -31,33 +31,25 @@ const AppFooter = () => {
           <span className='header'>Useful Links</span>
           <NavLink
             exact
-            activeClassName='active_link'
-            className='custom_link'
-            to=''
+            to='/#overview'
           >
             Overview
           </NavLink>
           <NavLink
             exact
-            activeClassName='active_link'
-            className='custom_link'
-            to=''
+            to='/#timeline'
           >
             Timeline
           </NavLink>
           <NavLink
             exact
-            activeClassName='active_link'
-            className='custom_link'
-            to=''
+            to='/#faq'
           >
             FAQs
           </NavLink>
           <NavLink
             exact
-            activeClassName='active_link'
-            className='custom_link'
-            to=''
+            to='/register'
           >
             Register
           </NavLink>
