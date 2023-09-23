@@ -6,7 +6,7 @@ import { notificationVariant } from '../../utils/helpers';
 interface props {
   errorMessage?: string;
   errorVisible?: boolean;
-  className?: boolean;
+  className?: string;
   onBlur?: FocusEventHandler<HTMLInputElement> | undefined;
   onChange?: ChangeEventHandler<HTMLInputElement> | undefined;
   name?: string;
@@ -32,7 +32,7 @@ const CustomInput: React.FC<props> = ({
 }) => {
   return (
     <div className={`custom_input ${className || ''}`}>
-      <label htmlFor='' className='body text_color'>
+      <label htmlFor='' className='body text_color input_label'>
         {label}
       </label>
       <input

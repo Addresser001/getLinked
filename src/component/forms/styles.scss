@@ -2,9 +2,16 @@
   position: relative;
   display: flex;
   flex-direction: column;
+
   label {
     display: block;
     margin-bottom: 5px;
+  }
+  .input_label {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 
   > input,
