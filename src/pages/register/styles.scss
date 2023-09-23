@@ -6,11 +6,11 @@
 
   padding-bottom: 57px;
   padding-top: 72px;
-  overflow: hidden;
 
   .sub_container {
-    width: 95%;
-    margin-right: auto;
+    width: 90%;
+
+    margin: auto;
     display: flex;
     justify-content: space-between;
 
@@ -25,34 +25,53 @@
       top: -200px;
       left: 0px;
     }
+
+    .background_beem_right {
+      background: url('../../../public/images/background_beem_right.png');
+      background-repeat: no-repeat;
+      background-blend-mode: hard-light;
+      width: 537px;
+      height: 648px;
+      flex-shrink: 0;
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+    }
+
     .image_section {
-      width: 40%;
+      width: 35%;
       position: relative;
       .star_1 {
         position: absolute;
-        left: 118px;
+        left: 28px;
         top: 40px;
       }
       .star_3 {
         position: absolute;
-        right: -100px;
+        right: -80px;
         bottom: 170px;
       }
       .star_2 {
         position: absolute;
         bottom: 30px;
-        left: 120px;
+        left: 50px;
       }
 
+      .register_header_mobile {
+        display: none;
+      }
       .register_page_side_image {
-        width: 717px;
-        height: 717px;
+        width: 100%;
+        height: 550px;
+        position: relative;
+        top: 70px;
+        left: 50px;
       }
     }
 
     .form_section {
-      width: 50%;
-      height: 740px;
+      overflow: hidden;
+      width: 55%;
       border-radius: 12px;
       background: rgba(255, 255, 255, 0.03);
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -87,7 +106,6 @@
             top: -13px;
           }
           .text {
-            color: #fff;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -96,7 +114,6 @@
               border: 0px;
               border-bottom: 1px solid #d434fe;
               border-style: dashed;
-
               padding: 0px 70px;
             }
           }
@@ -106,20 +123,384 @@
           font-style: normal;
           font-weight: 400;
           line-height: normal;
-          color: #fff;
+        }
+      }
+
+      .form {
+        .form_input_container {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          margin-top: 33px;
+
+          .form_input_sub_container {
+            width: 47%;
+
+            .register_input_fill {
+              margin-bottom: 29px;
+            }
+          }
+        }
+
+        .please_review_your_registration {
+          color: #ff26b9;
+
+          font-size: 12px;
+          font-style: italic;
+          font-weight: 400;
+          line-height: normal;
+        }
+        .check_box_contianer {
+          margin-top: 16px;
+          margin-bottom: 22px;
+          .check_box {
+            border-radius: 2px;
+            border: 1px solid #fff;
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            background-color: transparent;
+          }
+          .i_agreed_with_the_event_terms {
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            position: relative;
+            bottom: 2px;
+          }
+        }
+
+        .register_now_btn {
+          width: 100%;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
         }
       }
     }
-    .background_beem_right {
-      background: url('../../../public/images/background_beem_right.png');
-      background-repeat: no-repeat;
-      background-blend-mode: hard-light;
-      width: 1037px;
-      height: 948px;
-      flex-shrink: 0;
-      position: absolute;
-      top: 200px;
-      right: -500px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .sub_container {
+      width: 80%;
+      .background_beem_left {
+        width: 100%;
+        height: 948px;
+      }
+
+      .image_section {
+        width: 35%;
+        position: relative;
+
+        .register_page_side_image {
+          width: 100%;
+          height: 400px;
+          position: relative;
+          top: 70px;
+          left: 0px;
+        }
+      }
+
+      .form_section {
+        padding: 50px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .sub_container {
+      width: 90%;
+
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+
+      .image_section {
+        width: 35%;
+
+        .star_3 {
+          position: absolute;
+          right: -50px;
+          bottom: 10px;
+        }
+        .register_page_side_image {
+          width: 100%;
+          height: 400px;
+          position: relative;
+          top: 70px;
+          left: 0px;
+        }
+      }
+
+      .form_section {
+        overflow: hidden;
+        width: 60%;
+
+        .star_2_2 {
+          position: absolute;
+          right: 200px;
+          top: 20px;
+        }
+        .star_4 {
+          position: absolute;
+          right: 100px;
+          bottom: -10px;
+        }
+        .header_container {
+          .register_header {
+            color: #d434fe;
+            font-family: $clash-bold;
+            font-size: 32px;
+            font-style: normal;
+            line-height: normal;
+            padding-bottom: 46px;
+          }
+          .be_part_of_this_movement {
+            position: relative;
+            padding-bottom: 19px;
+            .image_container {
+              position: absolute;
+              left: 225px;
+              top: -13px;
+            }
+            .text {
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              span {
+                border: 0px;
+                border-bottom: 1px solid #d434fe;
+                border-style: dashed;
+                padding: 0px 70px;
+              }
+            }
+          }
+          .create_your_account_text {
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+
+        .form {
+          .form_input_container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 33px;
+
+            .form_input_sub_container {
+              width: 47%;
+
+              .register_input_fill {
+                margin-bottom: 29px;
+              }
+            }
+          }
+
+          .please_review_your_registration {
+            color: #ff26b9;
+
+            font-size: 12px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: normal;
+          }
+          .check_box_contianer {
+            margin-top: 16px;
+            margin-bottom: 22px;
+            .check_box {
+              border-radius: 2px;
+              border: 1px solid #fff;
+              width: 14px;
+              height: 14px;
+              flex-shrink: 0;
+              background-color: transparent;
+            }
+            .i_agreed_with_the_event_terms {
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              position: relative;
+              bottom: 2px;
+            }
+          }
+
+          .register_now_btn {
+            width: 100%;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-bottom: 57px;
+    padding-top: 72px;
+    overflow-x: hidden;
+
+    .sub_container {
+      width: 70%;
+
+      margin: auto;
+      display: block;
+
+      .background_beem_left {
+        width: 717px;
+        height: 100%;
+        top: 00px;
+        left: -200px;
+      }
+
+      .background_beem_right {
+        display: none;
+      }
+
+      .image_section {
+        width: 100%;
+        position: relative;
+        text-align: center;
+        .star_1 {
+          position: absolute;
+          left: 100%;
+          top: 200px;
+          width: 14px;
+          height: 18px;
+        }
+        .star_3 {
+          position: absolute;
+          right: -100px;
+          bottom: 170px;
+        }
+        .star_2 {
+          position: absolute;
+          bottom: -140px;
+          left: -25px;
+          width: 14px;
+          height: 18px;
+        }
+
+        .register_header_mobile {
+          color: #d434fe;
+          font-family: $clash-bold;
+          font-size: 15px;
+          font-style: normal;
+          line-height: normal;
+          padding-bottom: 46px;
+          display: block;
+          text-align: left;
+        }
+        .register_page_side_image {
+          width: 60%;
+          height: 60%;
+          top: 0px;
+          left: 0px;
+        }
+      }
+
+      .form_section {
+        width: 100%;
+        border-radius: 0px;
+        box-shadow: 0px 0px 0px 0px;
+        padding: 20px 0px;
+        background-color: transparent;
+
+        .star_2_2 {
+          display: none;
+        }
+        .star_4 {
+          position: absolute;
+          right: 0px;
+          bottom: -0px;
+        }
+        .header_container {
+          .register_header {
+            display: none;
+          }
+          .be_part_of_this_movement {
+            position: relative;
+            padding-bottom: 9px;
+            .image_container {
+              position: absolute;
+              left: 175px;
+              top: -13px;
+              @media screen and (max-width: 320px) {
+                left: 165px;
+              }
+            }
+            .text {
+              font-size: 12px;
+              span {
+                padding: 0px 15%;
+              }
+            }
+          }
+          .create_your_account_text {
+            font-size: 20px;
+            @media screen and (max-width: 320px) {
+              font-size: 17px;
+            }
+          }
+        }
+
+        .form {
+          .form_input_container {
+            display: block;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 18px;
+
+            .form_input_sub_container {
+              width: 100%;
+
+              .register_input_fill {
+                margin-bottom: 29px;
+              }
+            }
+          }
+
+          .please_review_your_registration {
+            font-size: 9px;
+          }
+          .check_box_contianer {
+            margin-top: 16px;
+            margin-bottom: 22px;
+            .check_box {
+              border-radius: 2px;
+              border: 1px solid #fff;
+              width: 14px;
+              height: 14px;
+              flex-shrink: 0;
+              background-color: transparent;
+            }
+            .i_agreed_with_the_event_terms {
+              font-size: 10px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              position: relative;
+              bottom: 2px;
+            }
+          }
+
+          .register_now_btn {
+            width: 100%;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
     }
   }
 }

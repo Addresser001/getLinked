@@ -1,12 +1,11 @@
-import { ChangeEventHandler, FocusEventHandler } from "react";
-import "./styles.scss";
-import { motion, AnimatePresence } from "framer-motion";
-
+import { ChangeEventHandler, FocusEventHandler } from 'react';
+import './styles.scss';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface props {
   errorMessage?: string;
   errorVisible?: boolean;
-  className?: boolean;
+  className?: string;
   onBlur?: FocusEventHandler<HTMLTextAreaElement> | undefined;
   onChange?: ChangeEventHandler<HTMLTextAreaElement> | undefined;
   name?: string;
@@ -30,13 +29,15 @@ const TextArea: React.FC<props> = ({
   label,
   cols,
   rows,
-  className
+  className,
 }) => {
   return (
-    <div className={`custom_input ${className || ""}`}>
-      <label htmlFor="" className="body text_color">{label}</label>
+    <div className={`custom_input ${className || ''}`}>
+      <label htmlFor='' className='body text_color'>
+        {label}
+      </label>
       <textarea
-        className={errorVisible && errorMessage ? "error" : ""}
+        className={errorVisible && errorMessage ? 'error' : ''}
         cols={cols}
         rows={rows}
         disabled={disabled}
@@ -47,32 +48,33 @@ const TextArea: React.FC<props> = ({
         name={name}
       ></textarea>
       <AnimatePresence>
-        {(errorVisible && errorMessage) &&
+        {errorVisible && errorMessage && (
           <motion.div
             initial={{
-              bottom: "-40px",
+              bottom: '-40px',
               opacity: 0,
             }}
             animate={{
-              bottom: "-20px",
+              bottom: '-20px',
               opacity: 1,
               transition: { duration: 0.15 },
             }}
             exit={{
-              bottom: "-40px",
+              bottom: '-40px',
               opacity: 0,
               transition: {
                 duration: 0.15,
-                ease: "easeInOut",
+                ease: 'easeInOut',
                 transitionEnd: {
-                  display: "none"
-                }
-              }
+                  display: 'none',
+                },
+              },
             }}
-            className="error-message">
+            className='error-message'
+          >
             <small>{errorMessage}</small>
           </motion.div>
-        }
+        )}
       </AnimatePresence>
     </div>
   );

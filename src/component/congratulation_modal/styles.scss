@@ -1,0 +1,19 @@
+.congratulation_modal {
+  width: 100%;
+  height: 100vh;
+  background: rgba(21, 14, 40, 0.93);
+
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  z-index: 9999999;
+  .congratulation_modal_sub_container {
+    margin: auto;
+    width: 699px;
+    height: 664px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #d434fe;
+    background: rgba(255, 255, 255, 0.01);
+  }
+}

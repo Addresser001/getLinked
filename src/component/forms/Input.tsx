@@ -1,12 +1,12 @@
-import { ChangeEventHandler, FocusEventHandler } from "react";
-import "./styles.scss";
-import { AnimatePresence, motion } from 'framer-motion'
-import { notificationVariant } from "../../utils/helpers";
+import { ChangeEventHandler, FocusEventHandler } from 'react';
+import './styles.scss';
+import { AnimatePresence, motion } from 'framer-motion';
+import { notificationVariant } from '../../utils/helpers';
 
 interface props {
   errorMessage?: string;
   errorVisible?: boolean;
-  className?: boolean;
+  className?: string;
   onBlur?: FocusEventHandler<HTMLInputElement> | undefined;
   onChange?: ChangeEventHandler<HTMLInputElement> | undefined;
   name?: string;
@@ -28,13 +28,15 @@ const CustomInput: React.FC<props> = ({
   value,
   type,
   label,
-  className
+  className,
 }) => {
   return (
-    <div className={`custom_input ${className || ""}`}>
-      <label htmlFor="" className="body text_color">{label}</label>
+    <div className={`custom_input ${className || ''}`}>
+      <label htmlFor='' className='body text_color input_label'>
+        {label}
+      </label>
       <input
-        className={errorVisible && errorMessage ? "error" : ""}
+        className={errorVisible && errorMessage ? 'error' : ''}
         name={name}
         type={type}
         placeholder={placeholder}
@@ -43,17 +45,19 @@ const CustomInput: React.FC<props> = ({
         disabled={disabled}
         onBlur={onBlur}
       />
+
       <AnimatePresence>
-        {(errorVisible && errorMessage) &&
+        {errorVisible && errorMessage && (
           <motion.div
             variants={notificationVariant}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className="error-message">
+            initial='hidden'
+            animate='visible'
+            exit='exit'
+            className='error-message'
+          >
             <small>{errorMessage}</small>
           </motion.div>
-        }
+        )}
       </AnimatePresence>
     </div>
   );

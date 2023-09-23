@@ -1,12 +1,17 @@
-@import '../../assets/styles/variables';
-
 .custom_input {
 	position: relative;
 	display: flex;
 	flex-direction: column;
+
 	label {
 		display: block;
 		margin-bottom: 5px;
+	}
+	.input_label {
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
 	}
 
 	> input,
@@ -21,6 +26,7 @@
 		font-weight: 500;
 		font-size: 16px;
 		line-height: 19px;
+		font-size: 14px;
 		font-weight: 400;
 		line-height: normal;
 		color: #fff;
@@ -31,6 +37,7 @@
 		}
 		&::placeholder {
 			color: rgba(255, 255, 255, 0.25);
+			font-size: 14px;
 			font-weight: 400;
 			line-height: normal;
 		}

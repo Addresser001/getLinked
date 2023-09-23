@@ -51,3 +51,14 @@ export const notificationVariant2: Variants = {
 		},
 	},
 };
+
+export function validatePhone(number?: number): boolean {
+	let valid = false;
+
+	if (number) {
+		if (number.toString().length >= 11) {
+			valid = true;
+		}
+	}
+	return valid;
+}
