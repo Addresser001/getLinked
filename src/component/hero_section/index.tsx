@@ -11,6 +11,7 @@ const HeroSection = () => {
       </div>
       <div className='hero_content'>
         <div className='content'>
+
           <h1>getlinked Tech Hackathon <span>1.0</span></h1>
           <p>Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</p>
           <button>Register</button>

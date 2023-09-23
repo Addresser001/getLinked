@@ -22,6 +22,7 @@ body {
 	font-weight: 500;
 	line-height: normal;
 	font-variant: normal;
+	font-size: 14px;
 	max-width: 1512px;
 	margin: 0 auto;
 	color: #fff;
@@ -61,5 +62,24 @@ button {
 	border-radius: 4px;
 	.w-100 {
 		width: 100%;
+	}
+}
+
+.section_heading {
+	font-family: $clash-bold;
+	font-size: 32px;
+	font-weight: 700;
+
+	> span {
+		color: #d434fe;
+	}
+}
+.section_paragraph {
+	color: #fff;
+	font-weight: 400;
+	line-height: 27.5px;
+
+	> span {
+		color: #d434fe;
 	}
 }

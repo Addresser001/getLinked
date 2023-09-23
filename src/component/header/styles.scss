@@ -3,8 +3,9 @@
 	background-color: transparent;
 	display: flex;
 	justify-content: space-between;
-	padding: 67px 80px 30px;
+	padding: 67px 60px 30px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+	column-gap: 24px;
 
 	.app_name {
 		font-family: $clash-bold;
@@ -17,9 +18,13 @@
 		}
 	}
 	nav {
+		max-width: 716px;
+		width: 100%;
 		display: flex;
 		align-items: center;
-		column-gap: 56px;
+		justify-content: space-between;
+		// column-gap: 56px;
+		column-gap: 12px;
 
 		a {
 			color: #fff;
@@ -29,7 +34,13 @@
 		}
 
 		button {
-			margin-left: 65px;
+			// margin-left: 65px;
+			margin-left: 10%;
+		}
+	}
+	@media (max-width: 767px) {
+		nav {
+			display: none;
 		}
 	}
 }

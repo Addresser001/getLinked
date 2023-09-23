@@ -1,15 +1,17 @@
 @import '../../assets/styles/variables.scss';
-.intro_section {
+.judging_criteria_section {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 	display: flex;
 	align-items: center;
-	column-gap: 24px;
+	justify-content: center;
 	padding-top: 62px;
 	padding-bottom: 78px;
 	padding-left: 60px;
 	padding-right: 60px;
 
 	.image_wrapper {
+		display: flex;
+		justify-content: center;
 		flex: 1 1 0;
 
 		img {
@@ -21,10 +23,25 @@
 		flex: 1 1 0;
 		max-width: 535px;
 		.section_heading {
-			max-width: 398px;
+			max-width: 267px;
+			margin-bottom: 21px;
 		}
-		.section_paragraph {
-			margin-top: 16px;
+		.attributes {
+			display: flex;
+			flex-direction: column;
+			row-gap: 22px;
+			p {
+				font-size: 16px;
+				font-weight: 700;
+				line-height: 27.76px;
+
+				span {
+					color: #ff26b9;
+				}
+			}
+		}
+		button {
+			margin-top: 41px;
 		}
 	}
 }

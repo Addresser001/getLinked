@@ -1,24 +1,25 @@
-export interface singleRouteType {
-	path: string;
-	pathName: string;
-	Component: React.FC<{}>;
-}
-
-export interface singleProjectType {
-	coverImage: string | undefined;
-	projectType: 'single' | 'group';
+export interface singleTimelineType {
+	date: string;
 	title: string;
 	description: string;
-	link?: string | URL | undefined;
+}
+export interface singleCartigoryType {
+	id: number;
+	name: string;
+}
+export interface apiContactData {
+	email: string;
+	phone_number: string;
+	first_name: string;
+	message: string;
 }
 
-export interface socialsType {
-	name: string;
-	link: string | undefined;
-}
-export interface contactFormType {
-	full_name: string;
-	email_address: string;
-	subject: string;
-	message: string;
+export interface apiRegistrationData {
+	email: string;
+	phone_number: string;
+	team_name: string;
+	group_size: number;
+	project_topic: string;
+	category: number;
+	privacy_poclicy_accepted: boolean;
 }

@@ -25,6 +25,7 @@
 		align-items: center;
 		padding-left: 80px;
 		.content {
+			flex: 1 1 0;
 			h1 {
 				max-width: 597px;
 				font-family: $clash-bold;
@@ -72,7 +73,8 @@
 		}
 	}
 	.hero_image {
-		width: 50%;
+		flex: 1 1 0;
+		// width: 50%;
 		img {
 			width: 100%;
 		}
