@@ -31,9 +31,9 @@ const HeroSection = () => {
             onComplete={() => setCountdownComplete(true)}
             date='2023-09-26T01:02:03'
             renderer={({ days, hours, minutes, seconds }) => <div id='heroanim6' className='count_down'>
-              {days && <span>{days}<small>D</small></span>}
-              {hours && <span>{hours}<small>H</small></span>}
-              {minutes && <span>{minutes}<small>M</small></span>}
+              <span>{days}<small>D</small></span>
+              <span>{hours}<small>H</small></span>
+              <span>{minutes}<small>M</small></span>
               <span>{seconds}<small>S</small></span>
             </div>
             }
