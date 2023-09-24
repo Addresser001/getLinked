@@ -1,34 +1,21 @@
+import { useEffect, useState } from 'react';
 import CongratulationModal from '../../component/congratulation_modal/congratulation';
 import CustomInput from '../../component/forms/Input';
+import CustomSelect from '../../component/forms/select';
+import Services from '../../api/services';
+
 import './styles.scss';
 import { useFormik } from 'formik';
 const RegisterPage = () => {
-  const {
-    values,
-    handleChange,
-    handleSubmit,
-    setFieldValue,
-    errors,
-    handleReset,
-  } = useFormik({
-    initialValues: {
-      last_name: '',
-      first_name: '',
-      phone_no: '',
-      email: '',
-      password: '',
-      password_confirmation: '',
-      type: 'user',
-    },
-    // validationSchema: validationSchema,
-
-    onSubmit: async () => {
-      try {
-      } catch (err) {
-        console.log(err);
-      }
-    },
-  });
+  const [categoryList, setCategoryList] = useState<[] | null>(null);
+  const loadCategories = async () => {
+    const res = await Services.getCategoryList();
+    console.log(res);
+    setCategoryList(res.data);
+  };
+  useEffect(() => {
+    loadCategories();
+  }, []);
 
   return (
     <>
@@ -70,7 +57,6 @@ const RegisterPage = () => {
               className='form'
               onSubmit={(e) => {
                 e.preventDefault();
-                handleSubmit();
               }}
             >
               {' '}
@@ -88,12 +74,17 @@ const RegisterPage = () => {
                     placeholder='Enter your email address'
                     type='email'
                   />
-                  <CustomInput
+
+                  <CustomSelect
                     className='register_input_fill'
                     label='Category'
                     placeholder='Select your category'
-                    type='text'
-                  />
+                  >
+                    {categoryList?.map((cat) => {
+                      const { id, name } = cat;
+                      return <option value={name}>{name}</option>;
+                    })}
+                  </CustomSelect>
                 </div>
                 <div className='form_input_sub_container'>
                   <CustomInput
@@ -108,12 +99,12 @@ const RegisterPage = () => {
                     placeholder='What is your group project topic'
                     type='text'
                   />
-                  <CustomInput
+                  {/* <CustomSelect
                     className='register_input_fill'
                     label='Group Size'
                     placeholder='Select'
                     type='text'
-                  />
+                  /> */}
                 </div>
               </div>
               <p className='please_review_your_registration'>
