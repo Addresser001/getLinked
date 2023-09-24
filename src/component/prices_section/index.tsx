@@ -38,6 +38,11 @@ const PricesAndReward = () => {
           </div>
         </div>
       </div>
+      <div className='stars_constainer'>
+        <img className='star4' src='/images/star_4.png' alt='' />
+        <img className='star1' src='/images/star_1.png' alt='' />
+        <img className='star2' src='/images/star_2.png' alt='' />
+      </div>
     </section>
   );
 }

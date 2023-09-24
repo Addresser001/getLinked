@@ -47,6 +47,16 @@
       border-color: red;
     }
   }
+
+  .checkbox {
+    display: flex;
+    label {
+      font-size: 12px;
+      position: relative;
+      left: 10px;
+    }
+  }
+
   .error-message {
     color: red;
     position: absolute;

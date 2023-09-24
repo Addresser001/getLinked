@@ -14,13 +14,14 @@ interface props {
   errorVisible?: boolean;
   className?: string;
   onBlur?: FocusEventHandler<HTMLSelectElement> | undefined;
-  onSelect?: ReactEventHandler<HTMLSelectElement> | undefined;
+  onChange?: ReactEventHandler<HTMLSelectElement> | undefined;
   name?: string;
   placeholder?: string;
   disabled?: boolean;
   label?: string;
   id?: string;
   children: ReactNode;
+  value: string;
 }
 
 const CustomSelect: React.FC<props> = ({
@@ -29,12 +30,13 @@ const CustomSelect: React.FC<props> = ({
   errorMessage,
   errorVisible,
   onBlur,
-  onSelect,
+  onChange,
   placeholder,
   disabled,
   label,
   id,
   className,
+  value,
 }) => {
   return (
     <div className={`custom_input ${className || ''}`}>
@@ -47,9 +49,10 @@ const CustomSelect: React.FC<props> = ({
         name={name}
         id={id}
         placeholder={placeholder}
-        onSelect={onSelect}
+        onChange={onChange}
         disabled={disabled}
         onBlur={onBlur}
+        value={value || undefined}
       >
         {children}
       </select>

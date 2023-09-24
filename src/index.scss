@@ -3,29 +3,29 @@
 @import './assets/styles/variables.scss';
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	// transition: 0.2s ease-in-out;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // transition: 0.2s ease-in-out;
 }
 
 html {
-	// cursor: none;
-	scroll-behavior: smooth;
-	background: #150e28;
+  // cursor: none;
+  scroll-behavior: smooth;
+  background: #150e28;
 }
 
 body {
-	position: relative;
-	font-family: 'Montserrat', sans-serif;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	font-variant: normal;
-	font-size: 14px;
-	max-width: 1512px;
-	margin: 0 auto;
-	color: #fff;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-variant: normal;
+  font-size: 14px;
+  max-width: 1512px;
+  margin: 0 auto;
+  color: #fff;
 }
 
 h1,
@@ -35,99 +35,115 @@ h4,
 h5,
 h6,
 p {
-	margin: 0;
-	color: inherit;
+  margin: 0;
+  color: inherit;
 }
 
 input {
-	outline: 0;
+  outline: 0;
 }
 ul,
 li {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Firefox */
 input[type='number'] {
-	-moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	outline: 0;
-	border: 0;
-	cursor: pointer;
-	font-weight: 400;
-	background: linear-gradient(270deg, #903aff 0%, #d434fe 56.42%, #ff26b9 99.99%, #fe34b9 100%);
-	color: #fff;
-	width: 172px;
-	height: 53px;
-	border-radius: 4px;
-	.w-100 {
-		width: 100%;
-	}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  font-weight: 400;
+  background: linear-gradient(
+    270deg,
+    #903aff 0%,
+    #d434fe 56.42%,
+    #ff26b9 99.99%,
+    #fe34b9 100%
+  );
+  color: #fff;
+  width: 172px;
+  height: 53px;
+  border-radius: 4px;
+  .w-100 {
+    width: 100%;
+  }
 
-	&:disabled {
-		cursor: not-allowed;
-	}
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 .section_heading {
-	font-family: $clash-bold;
-	font-size: 32px;
-	font-weight: 700;
+  font-family: $clash-bold;
+  font-size: 32px;
+  font-weight: 700;
 
-	> span {
-		color: #d434fe;
-	}
+  > span {
+    color: #d434fe;
+  }
 }
 .section_paragraph {
-	color: #fff;
-	font-weight: 400;
-	line-height: 27.5px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 27.5px;
 
-	> span {
-		color: #d434fe;
-	}
+  > span {
+    color: #d434fe;
+  }
 }
 
 .mt-42 {
-	margin-top: 42px;
+  margin-top: 42px;
 }
 
 .loader {
-	border-radius: 50%;
-	width: 30px;
-	height: 30px;
-	position: relative;
-	border-top: 5px solid rgba(0, 0, 0, 0.03);
-	border-right: 5px solid rgba(0, 0, 0, 0.03);
-	border-bottom: 5px solid white;
-	border-left: 5px solid white;
-	-webkit-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	transform: translateZ(0);
-	-webkit-animation: load8 1.1s infinite linear;
-	animation: load 1.1s infinite linear;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border-top: 5px solid rgba(0, 0, 0, 0.03);
+  border-right: 5px solid rgba(0, 0, 0, 0.03);
+  border-bottom: 5px solid white;
+  border-left: 5px solid white;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load 1.1s infinite linear;
 }
 @keyframes load {
-	0% {
-		-webkit-transform: rotate(0);
-		transform: rotate(0);
-	}
-	100% {
-		-webkit-transform: rotate(360deg);
-		transform: rotate(360deg);
-	}
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.category_options {
+  padding-top: 30px !important;
+  background-color: #150e28;
+  height: 100px;
+
+  &:hover {
+    background-color: #903aff;
+  }
 }

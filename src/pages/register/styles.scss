@@ -126,6 +126,18 @@
         }
       }
 
+      .notification {
+        margin-top: 16px;
+        text-align: center;
+        padding: 10px;
+
+        &.error {
+          background-color: rgba(255, 0, 0, 0.1);
+        }
+        &.success {
+          background-color: rgba(0, 128, 0, 0.5);
+        }
+      }
       .form {
         .form_input_container {
           display: flex;
